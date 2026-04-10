@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
-import { ArrowRight, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowLeft, Sparkles } from "lucide-react";
 import { ThemeToggle } from "../components/theme-toggle";
 import { auth } from "../firebase";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
@@ -101,9 +101,14 @@ export default function LoginPage() {
 
       {/* Right Side - Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8 relative bg-neutral-50 dark:bg-neutral-950 transition-colors duration-300">
-        {/* Mobile Logo */}
-        <Link to="/" className="lg:hidden absolute top-8 left-8 text-2xl font-bold tracking-tighter text-purple-600 dark:text-purple-400">
-          UpLink
+        
+        {/* Back Button */}
+        <Link 
+          to="/" 
+          className="absolute top-8 left-8 flex items-center gap-2 text-sm font-medium text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back
         </Link>
 
         <div className="absolute top-8 right-8">
