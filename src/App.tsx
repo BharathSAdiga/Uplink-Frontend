@@ -6,6 +6,7 @@ import ResumePage from "./pages/ResumePage";
 import GithubPage from "./pages/GithubPage";
 import EventsPage from "./pages/EventsPage";
 import SettingsPage from "./pages/SettingsPage";
+import BuilderPage from "./pages/BuilderPage";
 import DashboardLayout from "./components/DashboardLayout";
 import { ThemeProvider } from "./components/theme-provider";
 
@@ -20,6 +21,7 @@ export default function App() {
           {/* Authenticated Routes wrapped in DashboardLayout */}
           <Route element={<DashboardLayout />}>
             <Route path="/home" element={<HomePage />} />
+            <Route path="/builder" element={<BuilderPage />} />
             <Route path="/resume" element={<ResumePage />} />
             <Route path="/github" element={<GithubPage />} />
             <Route path="/events" element={<EventsPage />} />

@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { FileText, Github, Calendar, LayoutDashboard, Settings, LogOut } from "lucide-react";
+import { FileText, Github, Calendar, LayoutDashboard, Settings, LogOut, Blocks } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 
 export default function DashboardLayout() {
@@ -7,6 +7,7 @@ export default function DashboardLayout() {
 
   const navItems = [
     { path: "/home", icon: LayoutDashboard, label: "Dashboard" },
+    { path: "/builder", icon: Blocks, label: "App Studio" },
     { path: "/resume", icon: FileText, label: "Documents" },
     { path: "/github", icon: Github, label: "Repo Analyzer" },
     { path: "/events", icon: Calendar, label: "Events" },
@@ -18,7 +19,7 @@ export default function DashboardLayout() {
       <aside className="w-64 border-r border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/30 flex flex-col transition-colors duration-300 hidden md:flex">
         <div className="p-6">
           <Link to="/" className="text-2xl font-bold tracking-tighter text-purple-600 dark:text-purple-400 mb-10 block">
-            UpLink<span className="text-neutral-900 dark:text-neutral-50">:</span>
+            UpLink
           </Link>
           
           <nav className="space-y-2">
@@ -67,7 +68,7 @@ export default function DashboardLayout() {
         {/* Mobile Header */}
         <header className="md:hidden flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/30">
           <Link to="/" className="text-xl font-bold tracking-tighter text-purple-600 dark:text-purple-400">
-            UpLink<span className="text-neutral-900 dark:text-neutral-50">:</span>
+            UpLink
           </Link>
           <ThemeToggle />
         </header>

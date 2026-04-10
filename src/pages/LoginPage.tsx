@@ -60,7 +60,7 @@ export default function LoginPage() {
         {/* Content */}
         <div className="relative z-10 p-12 max-w-xl">
           <Link to="/" className="text-4xl font-bold tracking-tighter text-purple-600 dark:text-purple-400 mb-12 block hover:opacity-80 transition-opacity">
-            UpLink<span className="text-neutral-900 dark:text-neutral-50">:</span>
+            UpLink
           </Link>
           
           <motion.div
@@ -89,7 +89,7 @@ export default function LoginPage() {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8 relative bg-neutral-50 dark:bg-neutral-950 transition-colors duration-300">
         {/* Mobile Logo */}
         <Link to="/" className="lg:hidden absolute top-8 left-8 text-2xl font-bold tracking-tighter text-purple-600 dark:text-purple-400">
-          UpLink<span className="text-neutral-900 dark:text-neutral-50">:</span>
+          UpLink
         </Link>
 
         <div className="absolute top-8 right-8">
